@@ -1,0 +1,19 @@
+tag {
+    background-color: red;
+} /* tag/element selector*/
+
+#id {
+    background-color: red;
+}
+
+.className {
+    background-color: red;
+}
+
+tag[attribute] {
+    background-color: red;
+} /* Egs:- img[src] {} */
+
+tag:state {
+    background-color: red;
+} /* Egs:- img:hover */
