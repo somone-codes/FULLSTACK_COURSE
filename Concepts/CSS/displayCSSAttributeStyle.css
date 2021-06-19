@@ -1,0 +1,36 @@
+
+.pWidth {
+    width: 800px;
+    background-color: #66BFBF;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.spanUnderline {
+    text-decoration: underline;
+    background-color: darkgreen;
+}
+
+.spanInline {
+    background-color: cadetblue;
+}
+
+.spanWidth{
+    width: 500px;
+    background-color: cyan;
+}
+
+.pDisplayBlock {
+    display: inline-block;
+}
+
+.pDisplayInline {
+    background-color: greenyellow;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}

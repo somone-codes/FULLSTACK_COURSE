@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display attribute example</title>
+    <link type="text/css" rel="stylesheet"  href="../CSS/displayCSSAttributeStyle.css">
+</head>
+<body>
+    <p class="pWidth">This p tag/element is a block element with custom width of 800px</p>
+    <p>Yet this new p tag is in new line since p is block element even if there is space as you can see from previous p tag it
+        doesnt allow next element in same line/block, not even the span(in line) element coming next.</p>
+
+    <span>This span tag/element is a inline element.</span>
+    <span class="spanInline"> Look I can be in the same line as my previous span tag.</span>
+    <span class="spanWidth"> Span with overriden width has no effect as they take up only the space that element requires.</span>
+    <p>Block element can house a <span class="spanUnderline">span element</span> Cool right?</p>
+
+    <p class="pDisplayBlock"> Look at me and next p tags.We are inline block tags.</p>
+    <p class="pDisplayBlock pDisplayInline">We act like blocks where in we can have width but we can also be inline.</p>
+
+    <p class="hidden"> This element is hidden. And whatever come after it takes my place.
+        Alternatively use "visibility" attribute to hold my place.</p>
+    <p>I come after hidden element.</p>
+</body>
+</html>
