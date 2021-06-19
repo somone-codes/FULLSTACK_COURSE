@@ -1,0 +1,85 @@
+.generic{
+    height: 100px;
+    width: 100px;
+}
+
+.black_fixed{
+    position:fixed;
+    background-color: black;
+    left:1200px;
+}
+
+.generic_static{
+    position: relative;
+}
+.red_static {
+    background-color: red;
+}
+.blue_static {
+    background-color: blue;
+}
+.yellow_static {
+    background-color: yellow;
+}
+
+
+.generic_relative_1{
+    position: relative;
+}
+.red_relative_1 {
+    background-color: red;
+    left:200px;
+}
+.blue_relative_1 {
+    background-color: blue;
+    bottom:100px;
+}
+.yellow_relative_1 {
+    background-color: yellow;
+    bottom: 200px;
+    left:100px;
+}
+
+.generic_relative_2{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    display: inline-block;
+}
+.red_relative_2 {
+    background-color: red;
+    left:200px;
+}
+.blue_relative_2 {
+    background-color: blue;
+    right: 100px;
+}
+.yellow_relative_2 {
+    background-color: yellow;
+    right: 100px;
+}
+
+
+.generic_absolute{
+    position: absolute;
+}
+.red_absolute {
+    background-color: red;
+    bottom: 0px; /*or I can say top 200px*/
+    right: 0px; /*or I can say left 200px*/
+}
+.blue_absolute {
+    background-color: blue;
+    top: 100px;
+    left: 100px;
+}
+.yellow_absolute {
+    background-color: yellow;
+}
+
+div.relative {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 3px solid #73AD21;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS Positions</title>
+    <link type="text/css" rel="stylesheet"  href="../CSS/positionStyle.css">
+</head>
+<body>
+    <p>We are going to cover 4 positions.</p>
+    <ol>
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+    </ol>
+
+    <p>1. This is a black box is a <strong>fixed</strong> element.Even if you scroll it hangs on.</p>
+    <div class="generic black_fixed">
+    </div>
+    <hr><hr>
+
+
+    <p>2. This is a <strong>static</strong>ally placed element as all elements by default are static. </p>
+    <div class="generic generic_static red_static"></div>
+    <div class="generic generic_static blue_static"></div>
+    <div class="generic generic_static yellow_static"></div>
+    <hr><hr>
+
+
+    <p>3. Now lets take a look at <strong>relative position:</strong></p>
+    <div class="generic generic_relative_1 red_relative_1"></div>
+    <div class="generic generic_relative_1 blue_relative_1"></div>
+    <div class="generic generic_relative_1 yellow_relative_1"></div>
+    <hr>
+    <blockquote>Notice how the line is breaking after the original location of yellow div block i.e same place as
+        in static position.
+        Relative positioning happens from where the position of the object originally would be place in HTML w/o
+        relative attribute.
+        The attribute left,right,top & bottom have no effect when position is static.
+    </blockquote>
+
+    <p>Below is another way of same positional maneuver but using inline-block and position relative </p>
+    <div class="generic generic_relative_2 red_relative_2"></div>
+    <div class="generic generic_relative_2 blue_relative_2"></div>
+    <div class="generic generic_relative_2 yellow_relative_2"></div>
+    <hr>
+    <p>Notice now how the line is breaking here immediately after divs since we have used inline-block all are divs
+        place on same line next to each other.</p>
+    <hr><hr>
+
+    <p>4. <strong>Absolute positioning:</strong></p>
+    <div class="relative">
+        <div class="generic generic_absolute red_absolute"></div>
+        <div class="generic generic_absolute blue_absolute"></div>
+        <div class="generic generic_absolute yellow_absolute"></div>
+    </div>
+
+
+
+</body>
+</html>
