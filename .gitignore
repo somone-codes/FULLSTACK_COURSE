@@ -10,6 +10,13 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+.idea/MY_CODE.iml
+.idea/deployment.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+
 # Generated files
 .idea/**/contentModel.xml
 
@@ -189,3 +196,4 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
+./Section-19/node_modules/
