@@ -1,0 +1,25 @@
+show dbs; // lists all the DBs
+
+show collections; // lists all collections
+
+use <DB_NAME>; //selects DB
+
+db ; // show the current selected db
+
+db.<collectionName>.insertOne() ;//to create if not exists and insert data into a collection
+
+db.<collectionName>.insertMany([{JSON_object}, {Json_object}, ...]); //insert many records
+Egs:- db.records.insertMany([{record1:10, _id:1}, {record1:20, record2c2:data2}]);
+
+db.<collectionName>.find({<QueryCriteria}, {<Projection>); // to read all records, if queryCritiea is empty returns all records
+//if Projection empty returns all fields
+Egs: db.records.find({record1: { $gt: 10}},{_id:0}} // return all records where column record1>10 and dont include _id field
+
+db.<collectionName>.updateOne({QueryCriteria}, {<Action>});// update 1 record
+Egs: db.records.updateOne({_id:1},{ $set: { record1: 20}});
+
+db.<collectionName>.deleteOne({Filter});// delete 1 record
+Egs: db.records.deleteOne({_id:1});
+
+db.<collectionName>.deleteMany({Filter});// delete many record
+Egs: db.records.deleteOne({_id:1});
