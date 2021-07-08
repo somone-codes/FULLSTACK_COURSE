@@ -49,6 +49,18 @@ async function fetchData(model){
     }
 }
 
+async function findOne(model, condition){
+    try{
+        console.log("Finding and Fetching object")
+        let data;
+        data = await model.findOne(condition);
+        console.log("found and Fetched object successfully")
+        return data
+    }catch (e) {
+        console.log("Error during find and Fetch Object from DB" + e)
+    }
+}
+
 async function updateOne(model, conditions, document){
     try{
         console.log("Updating object")
@@ -56,6 +68,16 @@ async function updateOne(model, conditions, document){
         console.log("Updated object successfully")
     }catch (e) {
         console.log("Error during Updating Object(s) in DB" + e)
+    }
+}
+
+async function findOneAndUpdate(model, findCondition, updateCondition){
+    try{
+        console.log("finding & Updating object")
+        await model.findOneAndUpdate(findCondition, updateCondition)
+        console.log("found and Updated object successfully")
+    }catch (e) {
+        console.log("Error during finding & Updating Object(s) in DB" + e)
     }
 }
 async function deleteMany(model, conditions, document){
@@ -95,8 +117,10 @@ exports.connect     =   connect
 exports.saveObject  =   saveObject
 exports.insert      =   insert
 exports.fetchData   =   fetchData
+exports.findOne     =   findOne
 exports.close       =   close
 exports.update      =   updateOne
 exports.delete      =   deleteMany
 exports.deleteById  =   deleteById
+exports.findOneAndUpdate  =   findOneAndUpdate
 
