@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const mongo_ops = require(__dirname + '/db_ops/mongo_ops')
 const peopleModel = require(__dirname + '/models/peopleModel')
 const jobModel = require(__dirname + '/models/jobModel')
