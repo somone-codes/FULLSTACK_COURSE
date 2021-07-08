@@ -1,11 +1,10 @@
 {
   "name": "section-22",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "nodemon app.js"
+    "test": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +15,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.9"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
