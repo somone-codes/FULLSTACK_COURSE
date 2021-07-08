@@ -23,11 +23,13 @@ exports.insertTodoItems = async function(tasks) {
         data.push(new itemModel({task: task}))
     })
     await dbOps.connectToDBAndInsertDatas(itemModel, data)
+    return data
 }
 
 exports.insertTodoItem = async function(task) {
     const item = new itemModel({task: task})
-    return await dbOps.connectToDBAndInsertData(item)
+    await dbOps.connectToDBAndInsertData(item)
+    return item
 }
 
 exports.deleteTodoItem = async function(taskId) {

@@ -9,12 +9,13 @@
       <form  action="/deleteItem" method="post">
           <%  newListItems.forEach(function(item) { %>
               <div class="item">
-                  <input type="checkbox" name="checkbox" value="<%= item.id %>" onchange="this.form.submit()">
+                  <input type="checkbox" name="checkbox" value="<%= item.id %>" onchange="this.form.submit()"/>
                   <p><%= item.task %> </p>
               </div>
           <% }) %>
+          <input type="hidden" name="redirect" value="<%= listTitle %>"/>
       </form>
-      <form class="item" action="/addItem" method="post">
+      <form class="item" action="/<%= listTitle %>" method="post">
         <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
         <button type="submit" name="list">+</button>
       </form>

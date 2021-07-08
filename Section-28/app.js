@@ -2,7 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ItemModel = require(__dirname + '/models/itemModel');
-
+const ListModel = require(__dirname + '/models/listModel');
+const _         = require('lodash')
 //setup
 const app = express();
 
@@ -11,41 +12,52 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+const defaultItems = ['Welcome to todo List. :)', 'Type new Item and hit + button to add', '<-- Hit this to' +
+' delete item ']
 
 //routes
-app.get("/", function(req, res) {
-  ItemModel.fetchTodoItems().then((data => {
-    if(data.length === 0){
-      ItemModel.insertTodoItems(['Welcome to todo List. :)', 'Type new Item and hit + button to add', '<-- Hit this to' +
-      ' delete item '])
-          .then(()=> res.redirect("/"));
 
-    }else{
-      res.render("list", {listTitle: "today", newListItems: data})
-    }
-  }))
+app.get("/", function(req, res) {
+  res.redirect("/today")
 });
 
-app.post("/addItem", function(req, res){
-  const item = req.body.newItem;
-  ItemModel.insertTodoItem(item).then(()=>{
-    console.log("data insert, redirecting to home page");
-    res.redirect("/");
+app.get("/:listName", function (req, res) {
+  const listName = _.capitalize(req.params.listName);
+  ListModel.fetchOneList(listName).then( (data) => {
+    if (data)
+      res.render("list", {listTitle: listName, newListItems: data.tasks});
+    else
+     ListModel.insertListItems(listName, defaultItems).then((data) => res.redirect("/" + listName));
   });
 });
-
 
 app.post("/deleteItem", function(req, res){
 
   const itemId = req.body.checkbox;
+  const listName = req.body.redirect;
 
-  ItemModel.deleteTodoItem(itemId).then(()=>{
+  ListModel.findOneListItemAndDelete(listName, itemId).then(()=>{
     console.log("data delete, redirecting to home page");
-    res.redirect("/");
+    res.redirect("/" + listName );
   });
 });
 
+app.post("/:listName", function (req, res) {
+    const item = req.body.newItem;
+    const listName = req.params.listName
+
+  ListModel.fetchOneList(listName).then( (data) => {
+      ListModel.saveListObject(data, item).then((data) => res.redirect("/" + listName))
+    });
+})
+
+
 //start server
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+let port = process.env.PORT;
+
+if(port == null || port == "")
+    port = 3000
+
+app.listen(port, function() {
+  console.log("Server started on port " + port);
 });
