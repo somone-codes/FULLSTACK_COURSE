@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const dbOps = require('../db_ops/dbOps');
-const mencrypt = require('mongoose-encryption');
+//level 2 auth
+//const mencrypt = require('mongoose-encryption');
+const bcrypt = require('bcrypt')
 
 const Schema =  mongoose.Schema
 
@@ -33,7 +35,8 @@ const USER_SCHEMA =
         }
     };
 const userSchema = new Schema(USER_SCHEMA);
-userSchema.plugin(mencrypt, { secret: dbOps.secret, encryptedFields: ['password'] })
+// level 2 auth
+//userSchema.plugin(mencrypt, { secret: dbOps.secret, encryptedFields: ['password'] })
 
 const userModel = new mongoose.model("user", userSchema);
 
@@ -65,11 +68,10 @@ exports.validateUser = async (username, password) => {
         throw new Error(`user with name ${username} and password doesn't exists.` )
     }
     else {
-        if(userExists.password === password){
-            return true
-        }else{
-            return false
-        }
+        //level 1,2,3 auth
+        //if(userExists.password === password){
+        let result = await bcrypt.compare(password, userExists.password)
+        return result;
     }
 
 }
