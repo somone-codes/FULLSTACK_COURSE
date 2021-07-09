@@ -1,7 +1,7 @@
 //import required modules
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const md5_hash = require('md5')
 
 const userModel = require(__dirname + '/models/userModel');
 
@@ -26,7 +26,7 @@ app.route("/register")
     .post((req, res)=>{
         let username = req.body.username;
         let email    = req.body.email;
-        let password = req.body.password;
+        let password = md5_hash(req.body.password);
 
         userModel.addUser(username, email, password)
             .then(()=>res.redirect("/login"))
@@ -42,7 +42,7 @@ app.route("/login")
     })
     .post((req, res)=>{
         let username = req.body.username;
-        let password = req.body.password;
+        let password = md5_hash(req.body.password);
 
         userModel.validateUser(username, password).then((passed)=>{
             if(passed){
