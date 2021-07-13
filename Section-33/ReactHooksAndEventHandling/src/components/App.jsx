@@ -7,6 +7,7 @@ function App() {
 
     function formSubmit(event) {
         changeName(inputValue);
+        changeInputValue(""); //clean up the input for new input
         event.preventDefault(); // this is to prevent the next step on form submit which is page refresh
     }
 
