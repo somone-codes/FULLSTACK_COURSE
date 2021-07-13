@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function App() {
+export default function App() {
     let [isMouseOver, changeState] = useState(false)
     let [inputValue, changeInputValue] = useState("")
     let [name, changeName] = useState("")
@@ -26,5 +26,3 @@ function App() {
     );
 
 }
-
-export default App;
