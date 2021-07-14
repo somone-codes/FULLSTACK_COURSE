@@ -13,14 +13,9 @@ export default function App() {
 
     function inputChange(event) {
         let value = event.target.value;
-        let name = event.target.name; // donot use the event object inside state change functions
+        let name = event.target.name; // don't use the event object inside state change functions
 
-        changeInputValue((prevState) => {
-            return  {
-               ...prevState,
-                [name]: value
-            };
-        });
+        changeInputValue((prevState) => ( { ...prevState, [name]: value } ) );
     }
     function formSubmit(event) {
         changeName(inputValue);
