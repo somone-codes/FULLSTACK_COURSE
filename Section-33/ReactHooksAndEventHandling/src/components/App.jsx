@@ -18,8 +18,7 @@ export default function App() {
         changeInputValue((prevState) => {
             //prev state hold the values as per the last change in state
             let temp = {
-                fName: prevState.fName,
-                lName: prevState.lName,
+               ...prevState
             };
             //doing this in order to keep the state of the other object as previously
             if (name === "fName") {
