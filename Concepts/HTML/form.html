@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Example</title>
+</head>
+<body>
+    <form name="form_example" autocomplete="off" enctype="multipart/form-data" method="post" novalidate target="_self">
+        <h4>Grouped check box</h4>
+        <label for="checkbox_1">Checkbox 1</label>
+        <input id="checkbox_1" name="checkbox" type="checkbox" value="Checkbox 1" checked>
+        <label for="checkbox_2">Checkbox 2</label>
+        <input id="checkbox_2" name="checkbox" type="checkbox" value="Checkbox 2" indeterminate>
+        <br><br>
+        
+        <label for="radio_1">radio 1</label>
+        <input id="radio_1" name="radio" type="radio" value="radio 1" checked>
+        <label for="radio_2">radio 2</label>
+        <input id="radio_2" name="radio" type="radio" value="radio 2" >
+        <br><br>
+
+        <label for="color"><!-- alternate label + input nested -->
+            <input id="color" name="color" type="color" value="#ffffff">
+            Pick a color
+        </label>
+        <br><br>
+
+        <input id="button" name="buttonInput" type="button" value="Button For?"> <!-- this input type doesnt need label tag -->
+        <br><br>
+
+        <input id="date" name="date" type="date" value="1996-12-06" min="1986-06-05"  max="2021-06-05" step="any">
+        <label for="date"></label>
+        <br><br>
+
+        <label for="datetime-local">Datetime-local:</label>
+        <input type="datetime-local" id="datetime-local"
+               name="datetime-local" value="2018-06-12T19:30"
+               min="2018-06-07T00:00" max="2018-06-14T00:00">
+        <br><br>
+
+        <label for="email">Enter gmail email id:</label>
+        <input type="email" id="email"
+               pattern=".+@gmail\.com" multiple size="30" required minlength="3" maxlength="31" placeholder="abc@gmail.com" readonly>
+        <br><br>
+
+        <label for="file">File example but only accepts jpeg</label>
+        <input type="file" id="file" name="file" multiple cap accept="image/png, image/jpeg">
+        <br><br>
+
+        <input id="hidden" name="hidden" type="hidden" value="xm234jq">
+        <br><br>
+
+        <label for="image">Login image button:</label>
+        <input type="image" id="image" alt="Image Button" formaction="" formenctype="text/plain" formmethod="post"
+               formmethod height="30px" formtarget="_self" width="80px"
+               src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+        <br><br>
+
+        <label for="month">Enter month:</label>
+        <input type="month" id="month" name="month" min="2018-03" value="2018-05" readonly>
+        <br><br>
+
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" placeholder="20" readonly min="10" max="100">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        <br><br>
+
+        <input id="" name="" type="" value="">
+        <label for=""></label>
+        <br><br>
+    </form>
+</body>
+</html>
