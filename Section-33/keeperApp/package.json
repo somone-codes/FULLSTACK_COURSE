@@ -1,7 +1,7 @@
 {
   "name": "KeeperApp",
   "version": "*",
-  "description": "",
+  "description": "Store note(s) until page refresh",
   "main": "./src/index.js",
   "scripts": {
     "start": "react-scripts start",
