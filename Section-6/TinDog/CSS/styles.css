@@ -63,3 +63,32 @@ h1 {
 .feature-box i:hover{
     color: red;
 }
+
+#testimonials{
+    padding: 3% 10%;
+    text-align: center;
+    background-color: #ef8172;
+    color: white;
+    font-size: 1rem;
+}
+
+#testimonials img{
+    border-radius: 100%;
+    width: 10%;
+}
+
+#testimonials em{
+    font-family: Ubuntu;
+    font-size: 1.3rem;
+}
+
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding: 3%;
+}
+
+#press img{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
