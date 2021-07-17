@@ -1,9 +1,11 @@
 #title {
     background-color: #ff4c68;
 }
+body{
+    font-family: Montserrat;
+}
 
 .title{
-    font-family: Montserrat;
     font-size: 3rem;
     line-height: 1.5;
 }
