@@ -40,3 +40,26 @@ h1 {
     transform: rotate(30deg);
     width: 60%;
 }
+
+#features{
+    padding: 3% 10%;
+}
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+
+.feature-box p{
+    font-family: "Ubuntu";
+    color: grey;
+    font-size: 1.3rem;
+}
+
+.feature-box i{
+    color: #ef8172;
+    margin-bottom: 5%;
+}
+
+.feature-box i:hover{
+    color: red;
+}
