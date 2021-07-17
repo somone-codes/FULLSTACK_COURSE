@@ -1,3 +1,9 @@
 #title {
     background-color: #ff4c68;
 }
+
+.title{
+    font-family: Montserrat;
+    font-size: 3rem;
+    line-height: 1.5;
+}
