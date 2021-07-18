@@ -9,12 +9,15 @@
           integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
     <!-- google montserrat,ubuntu font -->
-    <<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
-           rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
+               rel="stylesheet">
 
     <!--    bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
     <!-- my css style sheet -->
     <link href="CSS/styles.css" rel="stylesheet" >
@@ -106,13 +109,29 @@
 
     <section id="testimonials">
 
-        <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-        <img src="images/dog-img.jpg" alt="dog-profile">
-        <em>Pebbles, New York</em>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+                        <img src="images/dog-img.jpg" alt="dog-profile">
+                        <em>Pebbles, New York</em>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+                        <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+                        <em>Beverly, Illinois</em>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+        </div>
 
-        <!-- <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-        <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
-        <em>Beverly, Illinois</em> -->
 
     </section>
 
@@ -120,7 +139,7 @@
     <!-- Press -->
 
     <section id="press">
-        <img src="images/techcrunch.png" alt="tc-logo">
+        <img src="images/TechCrunch.png" alt="tc-logo">
         <img src="images/tnw.png" alt="tnw-logo">
         <img src="images/bizinsider.png" alt="biz-insider-logo">
         <img src="images/mashable.png" alt="mashable-logo">
