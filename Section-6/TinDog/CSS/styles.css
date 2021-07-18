@@ -3,7 +3,7 @@
     color: white;
 }
 body{
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
 }
 
 .container-fluid{
@@ -12,7 +12,7 @@ body{
 
 h1 {
     font-size: 3.5rem;
-    font-family: "Montserrat";
+    font-family: "Montserrat", serif;
     line-height: 1.5;
 }
 
@@ -20,7 +20,7 @@ h1 {
     padding: 0 0 4.5rem;
 }
 .navbar-brand{
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", serif;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -28,7 +28,7 @@ h1 {
     padding: 0 18px;
 }
 .nav-link{
-    font-family: "Montserrat";
+    font-family: "Montserrat", serif;
     font-size: 1.2rem;
 }
 
@@ -54,7 +54,7 @@ h1 {
 }
 
 .feature-box p{
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", serif;
     color: grey;
     font-size: 1.3rem;
 }
@@ -83,7 +83,7 @@ h2 {
 }
 
 #testimonials em{
-    font-family: Ubuntu;
+    font-family: Ubuntu, serif;
     font-size: 1.3rem;
 }
 
@@ -104,7 +104,7 @@ h2 {
 
 .container {
     max-width: 1000px;
-    margin: 0px 180px;
+    margin: 0 180px;
 }
 
 .pricing-header {
@@ -118,7 +118,7 @@ h2 {
 
 #pricing p{
     color: grey;
-    font-family: Ubuntu;
+    font-family: Ubuntu, serif;
     font-size: 1.3rem;
 }
 
@@ -131,4 +131,31 @@ h2 {
     #title{
         text-align: center;
     }
+}
+
+#cta{
+    background-color: #ff4c68;
+    color: white;
+    padding: 5% 15% 2%;
+    text-align: center;
+}
+
+#cta button{
+    margin-top: 10%;
+}
+
+#cta h3{
+    width: 70%;
+    margin-left: 15%;
+    font-size: 3rem;
+}
+
+#footer{
+    background-color: white;
+    padding: 5% 15% 2%;
+    text-align: center;
+}
+
+#footer i{
+    margin: 0% 2%;
 }
