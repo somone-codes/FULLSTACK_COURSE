@@ -7,7 +7,7 @@ body{
 }
 
 .container-fluid{
-    padding: 3% 15%;
+    padding: 3% 15% 5%;
 }
 
 h1 {
@@ -40,6 +40,7 @@ h1 {
     transform: rotate(25deg);
     width: 20%;
     position: absolute;
+    right: 22%;
 }
 
 #features{
