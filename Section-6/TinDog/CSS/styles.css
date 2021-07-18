@@ -97,3 +97,23 @@ h2 {
     width: 15%;
     margin: 20px 20px 50px;
 }
+
+.container {
+    max-width: 1000px;
+    margin: 0px 180px;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+
+#pricing p{
+    color: grey;
+    font-family: Ubuntu;
+    font-size: 1.3rem;
+}
