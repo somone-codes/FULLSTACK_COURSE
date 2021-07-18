@@ -37,12 +37,15 @@ h1 {
 }
 
 .title-image{
-    transform: rotate(30deg);
-    width: 60%;
+    transform: rotate(25deg);
+    width: 20%;
+    position: absolute;
 }
 
 #features{
     padding: 3% 10%;
+    background-color: white;
+    position: relative;
 }
 .feature-box{
     text-align: center;
