@@ -25,7 +25,7 @@ function App() {
         <h1>To-Do List</h1>
       </div>
       <InputArea addingItem={addItem} />
-      // notice how we are passing parent function to child component as a prop , that is a component tree
+      {/*notice how we are passing parent function to child component as a prop , that is a component tree*/}
       <div>
         <ul>
           {items.map((todoItem, index) => (
